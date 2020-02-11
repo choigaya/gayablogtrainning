@@ -35,27 +35,22 @@ div#wrap {
     border: 2px solid yellow;
 
     header {
-      position: relative;
       width: 100%;
       height: 80px;
-      padding: 10px 10px;
-      margin-bottom: 60px;
-      font-size: 1rem;
-      vertical-align: middle;
+      padding: 20px;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
       border: 1px solid tomato;
 
-      div#logo {
+      div.logo {
         width: 50px;
         margin: 0;
-        display: inline-block;
-        font-size: 1.25rem;
+        font-size: 1.2rem;
       }
 
-      div#login {
-        position: absolute;
-        right: 80px;
-        font-size: 14px;
-        display: inline-block;
+      div.login {
+        font-size: 1rem;
       }
     }
 
@@ -64,7 +59,7 @@ div#wrap {
       width: 240px;
       padding: 20px 20px;
       line-height: 1.5;
-      font-size: 1.15rem;
+      font-size: 1rem;
       margin-right: 50px;
       margin-bottom: 20px;
       border: 1px solid green;
@@ -77,21 +72,22 @@ div#wrap {
       main {
         width: 100%;
         border: 1px solid purple;
-        display: inline-block;
       }
     }
 
     footer {
       width: 100%;
       overflow: hidden;
+      padding: 20px;
       border: 1px solid deeppink;
-      
+
       div.copyright {
-        font-size: 1.15rem;
+        line-height: 1.5;
+        font-size: 1rem;
       }
 
       div.sns-list {
-          margin-top: 20px;
+        margin-bottom: 10px;
       }
     }
   }
