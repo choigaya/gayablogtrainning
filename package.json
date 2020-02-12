@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GayaChoi/gayablog.git"
+    "url": "git+https://github.com/GayaChoi/gayagallery.git"
   },
   "keywords": [
     "blog"
@@ -16,10 +16,11 @@
   "author": "gaya",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/GayaChoi/gayablog/issues"
+    "url": "https://github.com/GayaChoi/gayagallery/issues"
   },
-  "homepage": "https://github.com/GayaChoi/gayablog#readme",
+  "homepage": "https://github.com/GayaChoi/gayagallery#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "morgan": "^1.9.1"
   }
 }
