@@ -151,8 +151,9 @@ a {
   text-decoration: none;
 }
 
-li {
-  text-decoration: underline;
+.list-area {
+  margin-top: 50px;
+  line-height: 2.5;
 }
 
 div#wrap {
@@ -160,60 +161,118 @@ div#wrap {
   height: 100%;
   padding: 0;
   margin: 0;
-  border: 5px solid blue;
+  border: 1px solid blue;
 }
 
 div#wrap div.container {
+  position: relative;
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   border: 2px solid yellow;
 }
 
 div#wrap div.container header {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
   width: 100%;
-  height: 80px;
-  padding: 20px;
+  height: 64px;
+  padding: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  background-color: white;
   border: 1px solid tomato;
+  z-index: 999;
 }
 
 div#wrap div.container header div.logo {
-  width: 50px;
-  margin: 0;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  line-height: 1.5;
 }
 
 div#wrap div.container header div.login {
-  font-size: 1rem;
+  font-size: .8rem;
 }
 
 div#wrap div.container nav {
-  float: left;
-  padding: 40px 40px;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 10px;
+  right: 0;
+  padding: 50px;
+  margin-top: 80px;
   line-height: 1.5;
-  font-size: 1rem;
+  width: 240px;
+  height: calc(100% - 64px);
+  overflow: hidden;
   border: 1px solid green;
-  text-decoration: underline;
+}
+
+div#wrap div.container nav div.sns-list {
+  margin-top: 50px;
 }
 
 div#wrap div.container div.main {
+  width: 100%;
+  height: calc(100% - 64px);
+  padding: 0 25px;
+  margin-top: 80px;
+  margin-left: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid brown;
   overflow: hidden;
-  padding-left: 50px;
 }
 
 div#wrap div.container div.main main {
-  width: 100%;
   border: 1px solid purple;
 }
 
+div#wrap div.container div.main main section {
+  border: 1px solid red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+div#wrap div.container div.main main section div.new {
+  border: 1px solid deepskyblue;
+}
+
+div#wrap div.container div.main main section div.vogue {
+  border: 1px solid orangered;
+}
+
 div#wrap div.container div.main footer {
-  width: 100%;
-  overflow: hidden;
   padding: 20px;
   border: 1px solid deeppink;
 }
@@ -221,9 +280,5 @@ div#wrap div.container div.main footer {
 div#wrap div.container div.main footer div.copyright {
   line-height: 1.5;
   font-size: 1rem;
-}
-
-div#wrap div.container div.main footer div.sns-list {
-  margin-bottom: 10px;
 }
 /*# sourceMappingURL=style.css.map */
