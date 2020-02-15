@@ -19,7 +19,7 @@ a {
 
 .list-area {
   margin-top: 50px;
-  line-height: 2.5;     
+  line-height: 2.5;
 }
 
 div#wrap {
@@ -36,7 +36,7 @@ div#wrap {
     display: flex;
     flex-direction: row;
     border: 2px solid yellow;
-    
+
     header {
       position: fixed;
       top: 0px;
@@ -47,18 +47,29 @@ div#wrap {
       padding: 10px;
       display: flex;
       flex-direction: row;
+      align-items: center;
       justify-content: space-between;
       background-color: white;
       border: 1px solid tomato;
+      box-shadow: lightgrey 1px 1px 3px 1px;
       z-index: 999;
-      
+
       div.logo {
-         font-size: 1.5rem;   
-         line-height: 1.5;
+        margin: 0 50px;
+        font-size: 1.8rem;
+        line-height: 1.5;
+        border-bottom: 5px solid rgba(240,219,79,2);
       }
 
       div.login {
-         font-size: .8rem;
+        margin-right: 20px;
+        font-size: .8rem;
+
+        span a:hover {
+          text-decoration: underline;
+          text-decoration-color: #323330;
+          background-color: rgba(240,219,79,.5);
+        }
       }
     }
 
@@ -71,21 +82,50 @@ div#wrap {
       padding: 50px;
       margin-top: 80px;
       line-height: 1.5;
-      width: 240px; 
+      letter-spacing: -0.05em;
+      width: 240px;
       height: calc(100% - 64px);
       overflow: hidden;
+      font-size: 16px;
       border: 1px solid green;
+      
+      div.sidebar-list {
+
+         li {
+           padding: .2em;
+           background-color: #323330;
+           list-style: none;
+           margin-bottom: .8em;
+
+         } 
+
+         a {
+          border: 1px solid #323330;
+          color: white;  
+        }
+
+        a:hover {
+          text-decoration: underline;
+          text-decoration-color: white;
+        }
+      }
 
       div.sns-list {
-         margin-top: 50px;
+        font-weight: 600;
+        margin-top: 80px;
+        text-decoration: underline;
+
+        a:hover {
+          color: rgba(240,219,79,1.5);
+        }
       }
     }
 
     div.main {
       width: 100%;
-      height: calc(100% - 64px);
+      height: calc(100% - 84px);
       padding: 0 25px;
-      margin-top: 80px; 
+      margin-top: 80px;
       margin-left: 300px;
       display: flex;
       flex-direction: column;
@@ -94,25 +134,15 @@ div#wrap {
 
       main {
         border: 1px solid purple;
+        overflow: hidden;
 
         section {
           border: 1px solid red;
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-
-          div.new {
-            border: 1px solid deepskyblue;  
-          }
-
-          div.vogue {
-            border: 1px solid orangered;
-          }
         }
       }
 
       footer {
-        padding: 20px;
+        margin-top: 200px;       
         border: 1px solid deeppink;
 
         div.copyright {
