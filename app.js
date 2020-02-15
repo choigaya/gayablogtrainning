@@ -27,6 +27,14 @@ app.get('/accounting', (req, res) => {
     res.sendFile(path.join(__dirname, 'html', 'accounting.html'));
 });
 
+app.get('/blog', (req, res) => {
+    res.sendFile(path.join(__dirname, 'html', 'blog.html'));
+});
+
+app.get('/about', (req, res) => {
+    res.sendFile(path.join(__dirname, 'html', 'about.html'));
+});
+
 app.listen(7700, () => {
    console.log("Server success!");
 });

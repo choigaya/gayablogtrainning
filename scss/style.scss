@@ -2,6 +2,7 @@
 
 * {
   box-sizing: border-box;
+  border: none !important;
 }
 
 html,
@@ -9,7 +10,7 @@ body {
   width: 100%;
   height: 100%;
   font-size: 16px;
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+  font-family: '나눔고딕',-apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
 }
 
 a {
@@ -17,9 +18,29 @@ a {
   text-decoration: none;
 }
 
-.list-area {
-  margin-top: 50px;
-  line-height: 2.5;
+.link-list {
+  font-weight: 600;
+  margin-top: 80px;
+  line-height: 1.5;
+  letter-spacing: -0.05em;
+  
+  a {
+    border-bottom: 2px solid rgb(51, 51, 51) !important;
+  }
+
+  a:hover {
+    color: rgba(0,71,171, .5);
+  }
+}
+
+.download {
+   margin: 0;
+}
+
+.site-title {
+   border: 1px solid #000000;
+   font-size: 2rem;
+   line-height: 1;
 }
 
 div#wrap {
@@ -58,17 +79,17 @@ div#wrap {
         margin: 0 50px;
         font-size: 1.8rem;
         line-height: 1.5;
-        border-bottom: 5px solid rgba(240,219,79,2);
+        border-bottom: 2px solid rgb(0,71,171) !important;   
       }
 
       div.login {
         margin-right: 20px;
         font-size: .8rem;
+        color: #000000;
 
         span a:hover {
           text-decoration: underline;
-          text-decoration-color: #323330;
-          background-color: rgba(240,219,79,.5);
+          color: rgba(0,71,171,.5);
         }
       }
     }
@@ -87,36 +108,20 @@ div#wrap {
       height: calc(100% - 64px);
       overflow: hidden;
       font-size: 16px;
+      font-weight: 600;
       border: 1px solid green;
-      
+
       div.sidebar-list {
 
-         li {
-           padding: .2em;
-           background-color: #323330;
-           list-style: none;
-           margin-bottom: .8em;
+        li {
+          padding: .2em;
+          list-style: none;
+          margin-bottom: .8em;
+          border-bottom: 2px solid #000000 !important;
 
-         } 
-
-         a {
-          border: 1px solid #323330;
-          color: white;  
-        }
-
-        a:hover {
-          text-decoration: underline;
-          text-decoration-color: white;
-        }
-      }
-
-      div.sns-list {
-        font-weight: 600;
-        margin-top: 80px;
-        text-decoration: underline;
-
-        a:hover {
-          color: rgba(240,219,79,1.5);
+          a:hover {
+            color: rgba(0,71,171, .5);
+          }
         }
       }
     }
@@ -133,16 +138,24 @@ div#wrap {
       overflow: hidden;
 
       main {
+        padding: 50px;
         border: 1px solid purple;
         overflow: hidden;
 
         section {
           border: 1px solid red;
+
+          div.post-area {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            border: 1px solid green;
+          }
         }
       }
 
       footer {
-        margin-top: 200px;       
+        margin-top: 200px;
         border: 1px solid deeppink;
 
         div.copyright {

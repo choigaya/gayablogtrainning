@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-   <meta charset="UTF-8"/>
-   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-   <link rel="stylesheet" href="css/style.css"/>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="css/style.css" />
    <title>Gaya: 블로그,일상.</title>
 </head>
 <body>
@@ -11,52 +11,85 @@
       <div class="container">
          <header>
             <div class="logo">
-               <a href="#">Gaya</a>
+               <a href="/">Gaya</a>
             </div>
             <div class="login">
-               <span><a href="#">로그인 | </a></span>
-               <span><a href="#">회원가입 </a></span>
+               <span><a href="/">로그인 </a></span>
+               <span>|</span>
+               <span><a href="/">회원가입 </a></span>
             </div>
          </header>
          <!-- header end -->
          <nav>
-            <h2></h2><!-- TODO: 사이드메뉴 리더기 만들것 --> 
-            <ul>
-               <li><a href="/">Index</a></li>
-               <li><a href="/portfolio">포트폴리오</a></li>
-               <li><a href="/develop">개발</a></li>
-               <li><a href="/art">아트</a></li>
-               <li><a href="/accounting">재무/회계</a></li>
-               <li><a href="/diary">그림일기</a></li>
-            </ul>
-            <div class="sns-list">
+            <h2></h2><!-- TODO: 사이드메뉴 리더기 만들것 -->
+            <div class="sidebar-list">
                <ul>
-                  <li><a href="#">Github</a></li>
-                  <li><a href="#">Facebook</a></li>
-                  <li><a href="#">Instagram</a></li>
-                  <li><a href="#">Artworks</a></li>
+                  <li><a href="/">HOME →</a></li>
+                  <li><a href="/portfolio">포트폴리오 →</a></li>
+                  <li><a href="/develop">개발공부 →</a></li>
+                  <li><a href="/art">문화예술 →</a></li>
+                  <li><a href="/accounting">재무/회계 →</a></li>
+                  <li><a href="/blog">블로그 →</a></li>
+                  <li><a href="/about">About →</a></li>
+               </ul>
+            </div>
+            <div class="link-list">
+               <ul>
+                  <li><a href="#">Github →</a></li>
+                  <li><a href="#">Facebook →</a></li>
+                  <li><a href="#">Instagram →</a></li>
+                  <li><a href="#">Artworks →</a></li>
                </ul>
             </div>
          </nav>
+         <!-- navigation area end -->
          <div class="main">
+            <!-- article -->
             <main>
                <section>
-                  <span></span><!-- TODO: 어바웃 리더기 만들것-->
-                  <h3>Test</h3>
-                  <p>
-                    
-                  </p>
+                  <span></span><!-- TODO: 메인 리더기 만들것 -->
+                  <h1 class="site-title">포트폴리오</h1>
+                  <p>이것저것 개발 한것을 정리해두었습니다.</p>
+                  <div class="post-area">
+                     <div class="post-area-item">
+                        post 1
+                     </div>
+                     <div class="post-area-item">
+                        post 2
+                     </div>
+                     <div class="post-area-item">
+                        post 3
+                     </div>
+                     <div class="post-area-item">
+                        post 4
+                     </div>
+                  </div>
+                  <h1>Download</h1>
+                  <div class="link-list download">
+                     <ul>
+                        <li><a href="#">PDF →</a></li>
+                        <li><a href="#">Docs →</a></li>
+                        <li><a href="#">Markdown →</a></li>
+                        <li><a href="#">Website →</a></li>
+                        <li><a href="#">Github →</a></li>
+                     </ul>
+                  </div>
                </section>
             </main>
+            <!-- main area end -->
             <footer>
                <div class="copyright">
                   <span>
-                     2020©️GayaChoi
+                     Copyright©️Gaya (Choiwoosung), All right reserved.
                   </span>
                </div>
             </footer>
+            <!-- footer end -->
          </div>
+         <!-- class main end -->
       </div>
+      <!-- container end -->
    </div>
+   <!-- wrap end -->
 </body>
 </html>
