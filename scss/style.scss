@@ -2,15 +2,16 @@
 
 * {
   box-sizing: border-box;
-  //border: none !important;
+  border: none !important;
 }
 
 html,
 body {
   width: 100%;
   height: 100%;
+  line-height: 1.5;
   font-size: 16px;
-  font-family: '나눔고딕',-apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+  font-family: '나눔고딕', -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
 }
 
 a {
@@ -23,25 +24,25 @@ a {
   margin-top: 80px;
   line-height: 1.5;
   letter-spacing: -0.05em;
-  
+
   a {
     border-bottom: 2px solid rgb(51, 51, 51) !important;
   }
 
   a:hover {
-    color: rgba(0,71,171, .5);
+    color: rgba(0, 71, 171, .5);
   }
 }
 
 .download {
-   margin: 0;
+  margin: 0;
 }
 
 .site-title {
-   border: 1px solid #000000;
-   font-size: 3rem;
-   line-height: 1;
-   margin-bottom: 1rem;
+  border: 1px solid #000000;
+  font-size: 3rem;
+  line-height: 1;
+  margin-bottom: 1rem;
 }
 
 div#wrap {
@@ -80,7 +81,7 @@ div#wrap {
         margin: 0 50px;
         font-size: 1.8rem;
         line-height: 1.5;
-        border-bottom: 2px solid rgb(0,71,171) !important;   
+        border-bottom: 2px solid rgb(0, 71, 171) !important;
       }
 
       div.login {
@@ -90,7 +91,7 @@ div#wrap {
 
         span a:hover {
           text-decoration: underline;
-          color: rgba(0,71,171,.5);
+          color: rgba(0, 71, 171, .5);
         }
       }
     }
@@ -106,7 +107,7 @@ div#wrap {
       line-height: 1.5;
       letter-spacing: -0.05em;
       width: 240px;
-      height: calc(100% - 64px);
+      /* height: calc(100% - 64px); */
       overflow: hidden;
       font-size: 16px;
       font-weight: 600;
@@ -121,7 +122,7 @@ div#wrap {
           border-bottom: 2px solid #000000 !important;
 
           a:hover {
-            color: rgba(0,71,171, .5);
+            color: rgba(0, 71, 171, .5);
           }
         }
       }
@@ -129,23 +130,40 @@ div#wrap {
 
     div.main {
       width: 100%;
-      height: 100%; // 나중에 컨텐츠 가 완성되면 크기 조정 다시 할 것
+      /*  height: 100%; // 나중에 컨텐츠 가 완성되면 크기 조정 다시 할 것 */
       padding: 0 25px;
       margin-top: 80px;
       margin-left: 300px;
       display: flex;
       flex-direction: column;
       border: 1px solid brown;
-      overflow: hidden;
 
       main {
         padding: 50px;
         border: 1px solid purple;
-        overflow: hidden;
+        overflow: auto;
 
         section {
           border: 1px solid red;
 
+          /* section.post-area-category */
+          &.post-area-category {
+            margin-top: 2rem;
+
+            .post-category-title {
+              padding: 0.3rem;
+              font-size: 1rem;
+              font-weight: 600;
+              margin-bottom: 1rem;
+
+              a:hover {
+                text-decoration: underline;
+                cursor: cursor;
+              }
+            }
+          }
+
+          /* 1번째 section */
           div.post-area {
             display: flex;
             flex-direction: row;
@@ -154,31 +172,75 @@ div#wrap {
             justify-content: space-between;
             border: 1px solid green;
 
-            div.post-item-title {
-               font-weight: 600;
-               font-size: 1.5em;
-               letter-spacing: -0.05em;
-               margin-bottom: 0.5rem;
+            /* 2번째 ~ 3번째 section 에 관한 썸네일 리스트 클래스 */
+            &.thumbnails-area {
+              display: flex;
+              flex-wrap: wrap;
 
-               h2 {
-                 font-weight: 600;
-                 margin-bottom: 0.5rem;
-               }
+              .thumbnails-item {
+                flex: 1;
+                flex-basis: calc(19% - 1rem);
+                margin: 0 0.5rem 1rem;
+                
+                /* 이미지가 들어감, figurecation 은 이미지의 설명부분이므로 생략 필요에 따라 사용가능 */
+                figure.thumbnails-item-image {
+                  margin-bottom: 0.555rem;
 
-               p.article-date,
-               p.post-item-category {
-                 display: inline;
-                 font-weight: 400;
-                 font-size: 0.85rem;
-                 text-decoration: none;    
-               }
+                  .item-image {
+                    padding-bottom: 100%;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                  }
+                }
 
-               p.post-item-category::before {
-                  content: '/';   
-               }
+                .thumbnails-item-info {
+                   font-size: .85rem;
+                }
+              }
+            }
 
-               :hover {
-                 text-decoration: underline;   
+            div.post-area-item {
+              flex-basis: calc(50% - 1rem);
+              margin: 0 0 1rem;
+
+              div.post-item-title {
+                font-weight: 600;
+                font-size: 1.5em;
+                letter-spacing: -0.05em;
+                margin-bottom: 0.5rem;
+
+                h2 {
+                  font-weight: 600;
+                  margin-bottom: 0.5rem;
+                }
+
+                p.article-date,
+                p.post-item-category {
+                  display: inline;
+                  font-weight: 400;
+                  font-size: 0.85rem;
+                  text-decoration: none;
+                }
+
+                p.post-item-category::before {
+                  content: '/';
+                }
+
+                :hover {
+                  text-decoration: underline;
+                }
+              }
+
+              .post-item-desc {
+                font-size: 1rem;
+                letter-spacing: -0.05em;
+                line-height: 1.5;
+                text-align: justify;
+
+                p:hover {
+                  text-decoration: underline;
+                }
               }
             }
           }
@@ -186,6 +248,7 @@ div#wrap {
       }
 
       footer {
+        padding: 0 25px;
         margin-top: 200px;
         border: 1px solid deeppink;
 
