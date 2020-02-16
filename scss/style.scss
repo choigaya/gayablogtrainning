@@ -2,7 +2,7 @@
 
 * {
   box-sizing: border-box;
-  border: none !important;
+  //border: none !important;
 }
 
 html,
@@ -39,8 +39,9 @@ a {
 
 .site-title {
    border: 1px solid #000000;
-   font-size: 2rem;
+   font-size: 3rem;
    line-height: 1;
+   margin-bottom: 1rem;
 }
 
 div#wrap {
@@ -128,7 +129,7 @@ div#wrap {
 
     div.main {
       width: 100%;
-      height: calc(100% - 84px);
+      height: 100%; // 나중에 컨텐츠 가 완성되면 크기 조정 다시 할 것
       padding: 0 25px;
       margin-top: 80px;
       margin-left: 300px;
@@ -149,7 +150,37 @@ div#wrap {
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
+            font-size: 16px;
+            justify-content: space-between;
             border: 1px solid green;
+
+            div.post-item-title {
+               font-weight: 600;
+               font-size: 1.5em;
+               letter-spacing: -0.05em;
+               margin-bottom: 0.5rem;
+
+               h2 {
+                 font-weight: 600;
+                 margin-bottom: 0.5rem;
+               }
+
+               p.article-date,
+               p.post-item-category {
+                 display: inline;
+                 font-weight: 400;
+                 font-size: 0.85rem;
+                 text-decoration: none;    
+               }
+
+               p.post-item-category::before {
+                  content: '/';   
+               }
+
+               :hover {
+                 text-decoration: underline;   
+              }
+            }
           }
         }
       }
