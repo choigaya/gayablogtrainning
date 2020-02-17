@@ -162,11 +162,11 @@ a {
 }
 
 .link-list a {
-  border-bottom: 2px solid #333333 !important;
+  border-bottom: 2px solid black !important;
 }
 
 .link-list a:hover {
-  color: rgba(0, 71, 171, 0.5);
+  color: rgba(51, 51, 51, 0.7);
 }
 
 .download {
@@ -212,7 +212,7 @@ div#wrap div.container {
   border: 2px solid yellow;
 }
 
-div#wrap div.container header {
+div#wrap div.container header.main-header {
   position: fixed;
   top: 0px;
   left: 0px;
@@ -240,22 +240,22 @@ div#wrap div.container header {
   z-index: 999;
 }
 
-div#wrap div.container header div.logo {
+div#wrap div.container header.main-header div.logo {
   margin: 0 50px;
   font-size: 1.8rem;
   line-height: 1.5;
-  border-bottom: 2px solid #0047ab !important;
+  border-bottom: 2px solid black !important;
 }
 
-div#wrap div.container header div.login {
+div#wrap div.container header.main-header div.login {
   margin-right: 20px;
   font-size: .8rem;
   color: #000000;
 }
 
-div#wrap div.container header div.login span a:hover {
+div#wrap div.container header.main-header div.login span a:hover {
   text-decoration: underline;
-  color: rgba(0, 71, 171, 0.5);
+  color: rgba(51, 51, 51, 0.7);
 }
 
 div#wrap div.container nav {
@@ -276,6 +276,10 @@ div#wrap div.container nav {
   border: 1px solid green;
 }
 
+div#wrap div.container nav div.sidebar-list {
+  border: 1px solid darkred;
+}
+
 div#wrap div.container nav div.sidebar-list li {
   padding: .2em;
   list-style: none;
@@ -284,7 +288,7 @@ div#wrap div.container nav div.sidebar-list li {
 }
 
 div#wrap div.container nav div.sidebar-list li a:hover {
-  color: rgba(0, 71, 171, 0.5);
+  color: rgba(51, 51, 51, 0.7);
 }
 
 div#wrap div.container div.main {
@@ -313,6 +317,7 @@ div#wrap div.container div.main main section {
   border: 1px solid red;
   /* section.post-area-category */
   /* 1번째 section */
+  /* 각 페이지 포스트 링크 */
 }
 
 div#wrap div.container div.main main section.post-area-category {
@@ -422,6 +427,20 @@ div#wrap div.container div.main main section div.post-area div.post-area-item .p
 
 div#wrap div.container div.main main section div.post-area div.post-area-item .post-item-desc p:hover {
   text-decoration: underline;
+}
+
+div#wrap div.container div.main main section.post {
+  line-height: 2;
+}
+
+div#wrap div.container div.main main section.post .post-header {
+  margin-bottom: 2rem;
+}
+
+div#wrap div.container div.main main section.post .post-header .post-title {
+  font-size: 2rem;
+  line-height: 1.4;
+  text-align: left;
 }
 
 div#wrap div.container div.main footer {

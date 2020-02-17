@@ -26,11 +26,11 @@ a {
   letter-spacing: -0.05em;
 
   a {
-    border-bottom: 2px solid rgb(51, 51, 51) !important;
+    border-bottom: 2px solid rgb(0, 0, 0) !important;
   }
 
   a:hover {
-    color: rgba(0, 71, 171, .5);
+    color: rgba(51,51,51,.7);
   }
 }
 
@@ -70,7 +70,7 @@ div#wrap {
     flex-direction: row;
     border: 2px solid yellow;
 
-    header {
+    header.main-header {
       position: fixed;
       top: 0px;
       left: 0px;
@@ -91,7 +91,7 @@ div#wrap {
         margin: 0 50px;
         font-size: 1.8rem;
         line-height: 1.5;
-        border-bottom: 2px solid rgb(0, 71, 171) !important;
+        border-bottom: 2px solid rgb(0, 0, 0) !important;
       }
 
       div.login {
@@ -101,7 +101,7 @@ div#wrap {
 
         span a:hover {
           text-decoration: underline;
-          color: rgba(0, 71, 171, .5);
+          color: rgba(51,51,51,.7);
         }
       }
     }
@@ -124,6 +124,7 @@ div#wrap {
       border: 1px solid green;
 
       div.sidebar-list {
+        border: 1px solid darkred;
 
         li {
           padding: .2em;
@@ -132,7 +133,7 @@ div#wrap {
           border-bottom: 2px solid #000000 !important;
 
           a:hover {
-            color: rgba(0, 71, 171, .5);
+            color: rgba(51,51,51,.7);
           }
         }
       }
@@ -251,6 +252,21 @@ div#wrap {
                 p:hover {
                   text-decoration: underline;
                 }
+              }
+            }
+          }
+
+          /* 각 페이지 포스트 링크 */
+          &.post {
+            line-height: 2;
+
+            .post-header {
+              margin-bottom: 2rem;
+
+              .post-title {
+                font-size: 2rem;
+                line-height: 1.4;
+                text-align: left;
               }
             }
           }
