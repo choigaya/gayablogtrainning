@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="css/style.css">
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="css/style.css" />
    <title>Gaya: 블로그,일상.</title>
 </head>
 <body>
@@ -13,40 +13,245 @@
             <div class="logo">
                <a href="#">Gaya</a>
             </div>
-            <nav>
-               <ul id="blogList">
-                  <li class="list">Index</li>
-                  <li class="list">포트폴리오</li>
-                  <li class="list">개발</li>
-                  <li class="list">아트</li>
-                  <li class="list">재무/회계</li>
-                  <li class="list">오류/제보</li>
-               </ul>
-            </nav>
-         </header>
-         <div id="login-area">
             <div class="login">
-                <ul>
-                   <li>로그인</li>
-                   <li>회원가입</li>
-                </ul> 
-            </div>    
-         </div>
+               <span><a href="#">로그인 </a></span>
+               <span>|</span>
+               <span><a href="#">회원가입 </a></span>
+            </div>
+         </header>
+         <!-- header end -->
+         <nav>
+            <h2></h2><!-- TODO: 사이드메뉴 리더기 만들것 -->
+            <div class="sidebar-list">
+               <ul>
+                  <li><a href="/">HOME →</a></li>
+                  <li><a href="/portfolio">포트폴리오 →</a></li>
+                  <li><a href="/develop">개발공부 →</a></li>
+                  <li><a href="/art">문화예술 →</a></li>
+                  <li><a href="/accounting">재무/회계 →</a></li>
+                  <li><a href="/blog">블로그 →</a></li>
+                  <li><a href="/about">About →</a></li>
+               </ul>
+            </div>
+            <div class="link-list">
+               <ul>
+                  <li><a href="#">Github →</a></li>
+                  <li><a href="#">Facebook →</a></li>
+                  <li><a href="#">Instagram →</a></li>
+                  <li><a href="#">Artworks →</a></li>
+               </ul>
+            </div>
+         </nav>
          <div class="main">
             <main>
+               <!-- article -->
                <section>
-                  <h3>Test</h3>
+                  <span></span><!-- TODO: 메인 리더기 만들것 -->
+                  <h1 class="site-title">FRESH POST</h1>
+                  <div class="post-area">
+                     <div class="post-area-item">
+                        <div class="post-item-title">
+                           <h2>
+                              <a href="#" target="_blank" rel="">테스트 입니다....(1)</a>
+                           </h2>
+                           <p class="article-date">2020-02-16</p>
+                           <p class="post-item-category">
+                              블로그
+                           </p>
+                        </div>
+                        <!-- main description -->
+                        <div class="post-item-desc">
+                           <a href="#" target="_blank" rel="">
+                           <!-- TODO: 이미지삽입 -->   
+                           <p> 
+                              테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.  
+                              테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.  
+                              테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.                 
+                           </p>  
+                           </a>   
+                        </div>
+                     </div>
+                     <div class="post-area-item">
+                        <div class="post-item-title">
+                           <h2>
+                              <a href="#" target="_blank" rel="">테스트 입니다....(2)</a>
+                           </h2>
+                           <p class="article-date">2020-02-16</p>
+                           <p class="post-item-category">
+                              블로그
+                           </p>
+                        </div>
+                        <div class="post-item-desc">
+                           <a href="#" target="_blank" rel="">
+                           <p> 
+                              테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.  
+                              테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.  
+                              테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.                
+                           </p>  
+                           </a>   
+                        </div>
+                     </div>
+                  </div>
+                  <!-- post-area end -->
+               </section>
+               <section class="post-area-category">
+                  <span></span><!-- TODO: 메인 리더기 만들것 -->
+                  <h2 class="post-category-title">
+                     <a href="/" target="_blank" rel="">개발공부 →</a>
+                  </h2>
+                  <div class="post-area thumbnails-area">
+                     <div class="post-area-item thumbnails-item">
+                        <a href="/" target="_blank" rel="">
+                           <figure class="thumbnails-item-image">
+                              <div class="item-image" style="background-image:url(test_img.jpg)"></div>
+                           </figure>
+                           <div class="thumbnails-item-info">
+                              테스트중입니다....테스트중입니다....테스트중입니다....
+                           </div>
+                        </a>
+                     </div>
+                     <!-- 첫 번째 썸네일 아이템 -->
+                     <div class="post-area-item thumbnails-item">
+                        <a href="/" target="_blank" rel="">
+                           <figure class="thumbnails-item-image">
+                              <div class="item-image" style="background-image:url(test_img.jpg)"></div>
+                           </figure>
+                           <div class="thumbnails-item-info">
+                              테스트중입니다....테스트중입니다....테스트중입니다....
+                           </div>
+                        </a>
+                     </div>
+                     <div class="post-area-item thumbnails-item">
+                        <a href="/" target="_blank" rel="">
+                           <figure class="thumbnails-item-image">
+                              <div class="item-image" style="background-image:url(test_img.jpg)"></div>
+                           </figure>
+                           <div class="thumbnails-item-info">
+                              테스트중입니다....테스트중입니다....테스트중입니다....
+                           </div>
+                        </a>
+                     </div>
+                     <div class="post-area-item thumbnails-item">
+                        <a href="/" target="_blank" rel="">
+                           <figure class="thumbnails-item-image">
+                              <div class="item-image" style="background-image:url(test_img.jpg)"></div>
+                           </figure>
+                           <div class="thumbnails-item-info">
+                              테스트중입니다....테스트중입니다....테스트중입니다....
+                           </div>
+                        </a>
+                     </div>
+                  </div>
+               </section>
+               <section class="post-area-category">
+                  <span></span><!-- TODO: 메인 리더기 만들것 -->
+                  <h2 class="post-category-title">
+                     <a href="#" target="_blank" rel="">문화예술 →</a>
+                  </h2>
+                  <div class="post-area thumbnails-area">
+                     <div class="post-area-item thumbnails-item">
+                        <a href="#" target="_blank" rel="">
+                           <figure class="thumbnails-item-image">
+                              <div class="item-image" style="background-image:url(test2_img.jpg)"></div>
+                           </figure>
+                           <div class="thumbnails-item-info">
+                              테스트중입니다....테스트중입니다....테스트중입니다....
+                           </div>
+                        </a>
+                     </div>
+                     <!-- 두 번째 썸네일 아이템 -->
+                     <div class="post-area-item thumbnails-item">
+                        <a href="/" target="_blank" rel="">
+                           <figure class="thumbnails-item-image">
+                              <div class="item-image" style="background-image:url(test2_img.jpg)"></div>
+                           </figure>
+                           <div class="thumbnails-item-info">
+                              테스트중입니다....테스트중입니다....테스트중입니다....
+                           </div>
+                        </a>
+                     </div>
+                     <div class="post-area-item thumbnails-item">
+                        <a href="/" target="_blank" rel="">
+                           <figure class="thumbnails-item-image">
+                              <div class="item-image" style="background-image:url(test2_img.jpg)"></div>
+                           </figure>
+                           <div class="thumbnails-item-info">
+                              테스트중입니다....테스트중입니다....테스트중입니다....
+                           </div>
+                        </a>
+                     </div>
+                     <div class="post-area-item thumbnails-item">
+                        <a href="/" target="_blank" rel="">
+                           <figure class="thumbnails-item-image">
+                              <div class="item-image" style="background-image:url(test2_img.jpg)"></div>
+                           </figure>
+                           <div class="thumbnails-item-info">
+                              테스트중입니다....테스트중입니다....테스트중입니다....
+                           </div>
+                        </a>
+                     </div>
+                  </div>
+               </section>
+               <section class="post-area-category">
+                  <span></span><!-- TODO: 메인 리더기 만들것 -->
+                  <h2 class="post-category-title">
+                     <a href="/" target="_blank" rel="">재무/회계 →</a>
+                  </h2>
+                  <div class="post-area thumbnails-area">
+                     <div class="post-area-item thumbnails-item">
+                        <a href="/" target="_blank" rel="">
+                           <figure class="thumbnails-item-image">
+                              <div class="item-image" style="background-image:url(test3_img.jpg)"></div>
+                           </figure>
+                           <div class="thumbnails-item-info">
+                              테스트중입니다....테스트중입니다....테스트중입니다....
+                           </div>
+                        </a>
+                     </div>
+                     <!-- 세 번째 썸네일 아이템 -->
+                     <div class="post-area-item thumbnails-item">
+                        <a href="/" target="_blank" rel="">
+                           <figure class="thumbnails-item-image">
+                              <div class="item-image" style="background-image:url(test3_img.jpg)"></div>
+                           </figure>
+                           <div class="thumbnails-item-info">
+                              테스트중입니다....테스트중입니다....테스트중입니다....
+                           </div>
+                        </a>
+                     </div>
+                     <div class="post-area-item thumbnails-item">
+                        <a href="/" target="_blank" rel="">
+                           <figure class="thumbnails-item-image">
+                              <div class="item-image" style="background-image:url(test3_img.jpg)"></div>
+                           </figure>
+                           <div class="thumbnails-item-info">
+                              테스트중입니다....테스트중입니다....테스트중입니다....
+                           </div>
+                        </a>
+                     </div>
+                     <div class="post-area-item thumbnails-item">
+                        <a href="/" target="_blank" rel="">
+                           <figure class="thumbnails-item-image">
+                              <div class="item-image" style="background-image:url(test3_img.jpg)"></div>
+                           </figure>
+                           <div class="thumbnails-item-info">
+                              테스트중입니다....테스트중입니다....테스트중입니다....
+                           </div>
+                        </a>
+                     </div>
+                  </div>
                </section>
             </main>
             <footer>
                <div class="copyright">
                   <span>
-                     2020©️GayaChoi
+                     Copyright©️Gaya (Choiwoosung), All right reserved.
                   </span>
                </div>
             </footer>
          </div>
       </div>
+   </div>
    </div>
 </body>
 </html>
