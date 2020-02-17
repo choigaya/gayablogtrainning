@@ -183,6 +183,13 @@ a {
   margin-bottom: 1rem;
 }
 
+.page-title {
+  font-size: 1rem;
+  font-weight: normal;
+  margin-bottom: 1rem;
+  padding: 0 0.2rem;
+}
+
 div#wrap {
   width: 100%;
   height: 100%;
@@ -293,7 +300,6 @@ div#wrap div.container div.main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-size: 18px;
   border: 1px solid brown;
 }
 
@@ -335,7 +341,6 @@ div#wrap div.container div.main main section div.post-area {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  font-size: 16px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -382,7 +387,7 @@ div#wrap div.container div.main main section div.post-area div.post-area-item {
 
 div#wrap div.container div.main main section div.post-area div.post-area-item div.post-item-title {
   font-weight: 600;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   letter-spacing: -0.05em;
   margin-bottom: 0.5rem;
 }
