@@ -4,7 +4,7 @@
    <meta charset="UTF-8" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
    <link rel="stylesheet" href="css/style.css" />
-   <title>Gaya: 블로그,일상.</title>
+   <title>Gaya Blog</title>
 </head>
 <body>
    <div id="wrap">
@@ -13,24 +13,20 @@
             <div class="logo">
                <a href="#">Gaya</a>
             </div>
-            <div class="login">
-               <span><a href="#">로그인 </a></span>
-               <span>|</span>
-               <span><a href="#">회원가입 </a></span>
-            </div>
          </header>
          <!-- header end -->
          <nav>
-            <h2></h2><!-- TODO: 사이드메뉴 리더기 만들것 -->
+            <h2>블로그 메뉴</h2>
             <div class="sidebar-list">
                <ul>
-                  <li><a href="/">HOME →</a></li>
-                  <li><a href="/portfolio">포트폴리오 →</a></li>
-                  <li><a href="/develop">개발공부 →</a></li>
-                  <li><a href="/art">문화예술 →</a></li>
-                  <li><a href="/accounting">재무/회계 →</a></li>
-                  <li><a href="/blog">블로그 →</a></li>
-                  <li><a href="/about">About →</a></li>
+                  <li class="home"><a href="/">HOME →</a></li>
+                  <li class="portfolio"><a href="/portfolio">포트폴리오 →</a></li>
+                  <li class="develop"><a href="/develop">개발공부 →</a></li>
+                  <li class="art"><a href="/art">문화예술 →</a></li>
+                  <li class="accounting"><a href="/accounting">재무/회계 →</a></li>
+                  <li class="language"><a href="/language">외국어 공부 →</a></li>
+                  <li class="blog"><a href="/blog">블로그 →</a></li>
+                  <li class="about"><a href="/about">About →</a></li>
                </ul>
             </div>
             <div class="link-list">
@@ -43,11 +39,11 @@
             </div>
          </nav>
          <div class="main">
-            <main>
+            <main role="main">
                <!-- article -->
                <h1 class="site-title">FRESH POST</h1>
                <section>
-                  <span></span><!-- TODO: 메인 리더기 만들것 -->
+                  <span>최신 포스팅</span><!-- TODO: 메인 리더기 만들것 -->
                   <div class="post-area">
                      <div class="post-area-item">
                         <div class="post-item-title">
@@ -61,8 +57,7 @@
                         </div>
                         <!-- main description -->
                         <div class="post-item-desc">
-                           <a href="#" target="_blank" rel="">
-                           <!-- TODO: 이미지삽입 -->   
+                           <a href="#" target="_blank" rel="">   
                            <p> 
                               테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.  
                               테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.  
@@ -95,7 +90,7 @@
                   <!-- post-area end -->
                </section>
                <section class="post-area-category">
-                  <span></span><!-- TODO: 메인 리더기 만들것 -->
+                  <span>개발공부</span>
                   <h2 class="post-category-title">
                      <a href="/" target="_blank" rel="">개발공부 →</a>
                   </h2>
@@ -103,7 +98,7 @@
                      <div class="post-area-item thumbnails-item">
                         <a href="/" target="_blank" rel="">
                            <figure class="thumbnails-item-image">
-                              <div class="item-image" style="background-image:url(test_img.jpg)"></div>
+                              <div class="item-image" style="background-image:url(images/test_img.jpg)"></div>
                            </figure>
                            <div class="thumbnails-item-info">
                               테스트중입니다....테스트중입니다....테스트중입니다....
@@ -114,7 +109,7 @@
                      <div class="post-area-item thumbnails-item">
                         <a href="/" target="_blank" rel="">
                            <figure class="thumbnails-item-image">
-                              <div class="item-image" style="background-image:url(test_img.jpg)"></div>
+                              <div class="item-image" style="background-image:url(images/test_img.jpg)"></div>
                            </figure>
                            <div class="thumbnails-item-info">
                               테스트중입니다....테스트중입니다....테스트중입니다....
@@ -124,7 +119,7 @@
                      <div class="post-area-item thumbnails-item">
                         <a href="/" target="_blank" rel="">
                            <figure class="thumbnails-item-image">
-                              <div class="item-image" style="background-image:url(test_img.jpg)"></div>
+                              <div class="item-image" style="background-image:url(images/test_img.jpg)"></div>
                            </figure>
                            <div class="thumbnails-item-info">
                               테스트중입니다....테스트중입니다....테스트중입니다....
@@ -134,7 +129,7 @@
                      <div class="post-area-item thumbnails-item">
                         <a href="/" target="_blank" rel="">
                            <figure class="thumbnails-item-image">
-                              <div class="item-image" style="background-image:url(test_img.jpg)"></div>
+                              <div class="item-image" style="background-image:url(images/test_img.jpg)"></div>
                            </figure>
                            <div class="thumbnails-item-info">
                               테스트중입니다....테스트중입니다....테스트중입니다....
@@ -144,7 +139,7 @@
                   </div>
                </section>
                <section class="post-area-category">
-                  <span></span><!-- TODO: 메인 리더기 만들것 -->
+                  <span>문화예술</span>
                   <h2 class="post-category-title">
                      <a href="#" target="_blank" rel="">문화예술 →</a>
                   </h2>
@@ -152,7 +147,7 @@
                      <div class="post-area-item thumbnails-item">
                         <a href="#" target="_blank" rel="">
                            <figure class="thumbnails-item-image">
-                              <div class="item-image" style="background-image:url(test2_img.jpg)"></div>
+                              <div class="item-image" style="background-image:url(images/test2_img.jpg)"></div>
                            </figure>
                            <div class="thumbnails-item-info">
                               테스트중입니다....테스트중입니다....테스트중입니다....
@@ -163,7 +158,7 @@
                      <div class="post-area-item thumbnails-item">
                         <a href="/" target="_blank" rel="">
                            <figure class="thumbnails-item-image">
-                              <div class="item-image" style="background-image:url(test2_img.jpg)"></div>
+                              <div class="item-image" style="background-image:url(images/test2_img.jpg)"></div>
                            </figure>
                            <div class="thumbnails-item-info">
                               테스트중입니다....테스트중입니다....테스트중입니다....
@@ -173,7 +168,7 @@
                      <div class="post-area-item thumbnails-item">
                         <a href="/" target="_blank" rel="">
                            <figure class="thumbnails-item-image">
-                              <div class="item-image" style="background-image:url(test2_img.jpg)"></div>
+                              <div class="item-image" style="background-image:url(images/test2_img.jpg)"></div>
                            </figure>
                            <div class="thumbnails-item-info">
                               테스트중입니다....테스트중입니다....테스트중입니다....
@@ -183,7 +178,7 @@
                      <div class="post-area-item thumbnails-item">
                         <a href="/" target="_blank" rel="">
                            <figure class="thumbnails-item-image">
-                              <div class="item-image" style="background-image:url(test2_img.jpg)"></div>
+                              <div class="item-image" style="background-image:url(images/test2_img.jpg)"></div>
                            </figure>
                            <div class="thumbnails-item-info">
                               테스트중입니다....테스트중입니다....테스트중입니다....
@@ -193,7 +188,7 @@
                   </div>
                </section>
                <section class="post-area-category">
-                  <span></span><!-- TODO: 메인 리더기 만들것 -->
+                  <span>재무/회계</span>
                   <h2 class="post-category-title">
                      <a href="/" target="_blank" rel="">재무/회계 →</a>
                   </h2>
@@ -201,7 +196,7 @@
                      <div class="post-area-item thumbnails-item">
                         <a href="/" target="_blank" rel="">
                            <figure class="thumbnails-item-image">
-                              <div class="item-image" style="background-image:url(test3_img.jpg)"></div>
+                              <div class="item-image" style="background-image:url(images/test3_img.jpg)"></div>
                            </figure>
                            <div class="thumbnails-item-info">
                               테스트중입니다....테스트중입니다....테스트중입니다....
@@ -212,7 +207,7 @@
                      <div class="post-area-item thumbnails-item">
                         <a href="/" target="_blank" rel="">
                            <figure class="thumbnails-item-image">
-                              <div class="item-image" style="background-image:url(test3_img.jpg)"></div>
+                              <div class="item-image" style="background-image:url(images/test3_img.jpg)"></div>
                            </figure>
                            <div class="thumbnails-item-info">
                               테스트중입니다....테스트중입니다....테스트중입니다....
@@ -222,7 +217,7 @@
                      <div class="post-area-item thumbnails-item">
                         <a href="/" target="_blank" rel="">
                            <figure class="thumbnails-item-image">
-                              <div class="item-image" style="background-image:url(test3_img.jpg)"></div>
+                              <div class="item-image" style="background-image:url(images/test3_img.jpg)"></div>
                            </figure>
                            <div class="thumbnails-item-info">
                               테스트중입니다....테스트중입니다....테스트중입니다....
@@ -232,7 +227,56 @@
                      <div class="post-area-item thumbnails-item">
                         <a href="/" target="_blank" rel="">
                            <figure class="thumbnails-item-image">
-                              <div class="item-image" style="background-image:url(test3_img.jpg)"></div>
+                              <div class="item-image" style="background-image:url(images/test3_img.jpg)"></div>
+                           </figure>
+                           <div class="thumbnails-item-info">
+                              테스트중입니다....테스트중입니다....테스트중입니다....
+                           </div>
+                        </a>
+                     </div>
+                  </div>
+               </section>
+               <section class="post-area-category">
+                  <span>개발공부</span>
+                  <h2 class="post-category-title">
+                     <a href="/" target="_blank" rel="">외국어 공부 →</a>
+                  </h2>
+                  <div class="post-area thumbnails-area">
+                     <div class="post-area-item thumbnails-item">
+                        <a href="/" target="_blank" rel="">
+                           <figure class="thumbnails-item-image">
+                              <div class="item-image" style="background-image:url(images/test_img.jpg)"></div>
+                           </figure>
+                           <div class="thumbnails-item-info">
+                              테스트중입니다....테스트중입니다....테스트중입니다....
+                           </div>
+                        </a>
+                     </div>
+                     <!-- 첫 번째 썸네일 아이템 -->
+                     <div class="post-area-item thumbnails-item">
+                        <a href="/" target="_blank" rel="">
+                           <figure class="thumbnails-item-image">
+                              <div class="item-image" style="background-image:url(images/test_img.jpg)"></div>
+                           </figure>
+                           <div class="thumbnails-item-info">
+                              테스트중입니다....테스트중입니다....테스트중입니다....
+                           </div>
+                        </a>
+                     </div>
+                     <div class="post-area-item thumbnails-item">
+                        <a href="/" target="_blank" rel="">
+                           <figure class="thumbnails-item-image">
+                              <div class="item-image" style="background-image:url(images/test_img.jpg)"></div>
+                           </figure>
+                           <div class="thumbnails-item-info">
+                              테스트중입니다....테스트중입니다....테스트중입니다....
+                           </div>
+                        </a>
+                     </div>
+                     <div class="post-area-item thumbnails-item">
+                        <a href="/" target="_blank" rel="">
+                           <figure class="thumbnails-item-image">
+                              <div class="item-image" style="background-image:url(images/test_img.jpg)"></div>
                            </figure>
                            <div class="thumbnails-item-info">
                               테스트중입니다....테스트중입니다....테스트중입니다....
@@ -254,4 +298,5 @@
    </div>
    </div>
 </body>
+<script src="js/main.js"></script>
 </html>

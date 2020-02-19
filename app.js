@@ -1,44 +1,34 @@
 const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
-
+const indexRouter = require('./routes/index');
 const app = express();
 
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'pug');
+
 app.use(morgan('combined'));
-app.use(express.static(path.join(__dirname, 'html')));
+app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/', (req, res) =>  {
-    res.sendFile(path.join(__dirname, 'html', 'index.html')); 
+app.use('/', indexRouter);
+
+// catch 404 and forward to error handler
+app.use(function(req, res, next) {
+   next(createError(404));
 });
-
-app.get('/portfolio', (req, res) => {
-    res.sendFile(path.join(__dirname, 'html', 'portfolio.html'));
+ 
+// error handler
+app.use(function(err, req, res, next) {
+   // set locals, only providing error in development
+   res.locals.message = err.message;
+   res.locals.error = req.app.get('env') === 'development' ? err : {};
+ 
+   // render the error page
+   res.status(err.status || 500);
+   res.render('error');
 });
-
-app.get('/develop', (req, res) => {
-    res.sendFile(path.join(__dirname, 'html', 'develop.html'));
-});
-
-app.get('/art', (req, res) => {
-    res.sendFile(path.join(__dirname, 'html', 'art.html'));
-});
-
-app.get('/accounting', (req, res) => {
-    res.sendFile(path.join(__dirname, 'html', 'accounting.html'));
-});
-
-app.get('/blog', (req, res) => {
-    res.sendFile(path.join(__dirname, 'html', 'blog.html'));
-});
-
-app.get('/blogpage', (req, res) => {
-    res.sendFile(path.join(__dirname, 'html', 'blogPage.html'));
-});
-
-app.get('/about', (req, res) => {
-    res.sendFile(path.join(__dirname, 'html', 'about.html'));
-});
-
+ 
 app.listen(7700, () => {
    console.log("Server success!");
 });
