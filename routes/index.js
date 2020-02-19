@@ -2,39 +2,39 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/', (req, res, next) => {
-    res.render('header');
+
 });
 
 router.get('/portfolio', (req, res, next) => {
-    res.render('header');
+    res.render('portfolio', { title: 'Gaya - 포트폴리오' }); 
 });
 
 router.get('/develop', (req, res, next) => {
-    res.send('develop');
+    res.render('develop', { title: 'Gaya - 개발공부' });
 });
 
 router.get('/art', (req, res, next) => {
-    res.send('art');
+    res.render('art', { title: 'Gaya - 문화예술' });
 });
 
 router.get('/accounting', (req, res, next) => {
-    res.send('accounting');
+    res.render('accounting', { title: 'Gaya - 재무/회계' });
 });
 
 router.get('/language', (req, res, next) => {
-    res.send('language');
-});
-
-router.get('/page', (req, res, next) => {
-    res.send('page');
-});
-
-router.get('/about', (req, res, next) => {
-    res.send('about');
+    res.render('language', { title: 'Gaya - 외국어공부' });
 });
 
 router.get('/blog', (req, res, next) => {
-   res.send('blog');
+    res.render('blog', { title: 'Gaya - 블로그' });
+});
+
+router.get('/about', (req, res, next) => {
+    res.render('about', { title: 'Gaya - About' }); 
+});
+
+router.get('/page', (req, res, next) => {
+    
 });
 
 module.exports = router;

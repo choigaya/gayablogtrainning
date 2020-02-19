@@ -1,0 +1,11 @@
+extends layout.pug
+
+block content
+    include header.pug
+    include nav.pug
+    .main
+        main(role="main")
+            h1.page-title 블로그
+            include blogMain.pug
+            
+        include footer.pug 

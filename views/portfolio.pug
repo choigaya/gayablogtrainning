@@ -1,0 +1,25 @@
+extends layout.pug
+
+block content
+    include header.pug
+    include nav.pug
+    .main
+        main(role="main")
+            h1.page-title 포트폴리오
+            include thumbArea.pug
+            section.post-area-category
+                //-리더기
+                span
+                h2.page-title Download
+                .link-list.download  
+                    ul
+                        li
+                            a(href="#") PDF → 
+                    ul
+                        li
+                            a(href="#") Docs → 
+                    ul
+                        li
+                            a(href="#") MarkDown →
+
+        include footer.pug 

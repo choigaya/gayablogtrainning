@@ -272,7 +272,6 @@ div#wrap div.container header.main-header div.login span a:hover {
 div#wrap div.container nav {
   position: fixed;
   z-index: 100;
-  top: 0;
   left: 10px;
   right: 0;
   padding: 50px;
@@ -382,9 +381,9 @@ div#wrap div.container div.main main section div.post-area.thumbnails-area {
 
 div#wrap div.container div.main main section div.post-area.thumbnails-area .thumbnails-item {
   width: 20%;
-  -ms-flex-preferred-size: calc(19% - 1rem);
-      flex-basis: calc(19% - 1rem);
-  margin: 0 0.5rem 1rem;
+  -ms-flex-preferred-size: calc(20% - 0.5rem);
+      flex-basis: calc(20% - 0.5rem);
+  margin: 0 0.85rem 2rem;
   /* 이미지가 들어감, figurecation 은 이미지의 설명부분이므로 생략 필요에 따라 사용가능 */
 }
 
