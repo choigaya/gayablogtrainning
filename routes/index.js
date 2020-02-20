@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/', (req, res, next) => {
-
+    res.render('index', { title: 'Gaya Blog' });
 });
 
 router.get('/portfolio', (req, res, next) => {
@@ -17,8 +17,8 @@ router.get('/art', (req, res, next) => {
     res.render('art', { title: 'Gaya - 문화예술' });
 });
 
-router.get('/accounting', (req, res, next) => {
-    res.render('accounting', { title: 'Gaya - 재무/회계' });
+router.get('/account', (req, res, next) => {
+    res.render('account', { title: 'Gaya - 재무/회계' });
 });
 
 router.get('/language', (req, res, next) => {
@@ -35,6 +35,10 @@ router.get('/about', (req, res, next) => {
 
 router.get('/page', (req, res, next) => {
     
+});
+
+router.get('*', (req, res, next) => {
+    res.send('404 not found');
 });
 
 module.exports = router;

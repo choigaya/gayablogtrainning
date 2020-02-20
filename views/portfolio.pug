@@ -6,7 +6,11 @@ block content
     .main
         main(role="main")
             h1.page-title 포트폴리오
-            include thumbArea.pug
+            section
+                //- 리더기
+                span 컨텐츠 별 메인페이지  
+                //- 컨텐츠 내용
+                include thumbnails.pug
             section.post-area-category
                 //-리더기
                 span

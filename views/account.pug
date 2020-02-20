@@ -6,6 +6,10 @@ block content
     .main
         main(role="main")
             h1.page-title 재무/회계
-            include thumbArea.pug
-            
+            section
+                //- 리더기
+                span 컨텐츠 별 메인페이지  
+                //- 컨텐츠 내용
+                include thumbnails.pug
+
         include footer.pug 

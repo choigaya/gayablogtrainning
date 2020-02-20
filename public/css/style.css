@@ -447,7 +447,7 @@ div#wrap div.container div.main main section div.post-area div.post-area-item .p
   text-align: justify;
 }
 
-div#wrap div.container div.main main section div.post-area div.post-area-item .post-item-desc p:hover {
+div#wrap div.container div.main main section div.post-area div.post-area-item .post-item-desc :hover {
   text-decoration: underline;
 }
 

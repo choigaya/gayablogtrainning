@@ -1,0 +1,53 @@
+extends layout.pug
+
+block content
+    include header.pug
+    include nav.pug
+    .main
+        main(role="main")
+            h1.site-title FRESH POST 
+            section
+                //- 리더기
+                span 최신 포스팅
+                .post-area
+                    .post-area-item
+                        .post-item-title
+                            h2 
+                                a(href="#", target="_blank", rel="") 테스트 입니다....(1)
+                            p.article-date 2020-02-20 
+                            p.post-item-category 블로그
+                        .post-item-desc
+                            a(href="#", target="_blank", rel="")
+                                p 테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.                       
+                    .post-area-item
+                        .post-item-title
+                            h2 
+                                a(href="#", target="_blank", rel="") 테스트 입니다....(2)
+                            p.article-date 2020-02-20 
+                            p.post-item-category 블로그
+                        .post-item-desc
+                            a(href="#", target="_blank", rel="")
+                                p 테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.테스트중입니다.                        
+
+            section.post-area-category
+                span 개발공부
+                h2.post-category-title
+                    a(href="/", target="_blank", rel="") 개발공부 →         
+                .post-area.thumbnails-area
+                    .post-area-item.thumbnails-item
+                        a(href="/", target="_blank", rel="")
+                            figure.thumbnails-item-image
+                                .item-image(style="background-image:url(images/test_img.jpg)") 
+                            .thumbnails-item-info 테스트중입니다....테스트중입니다....테스트중입니다....    
+                    
+                    .post-area-item.thumbnails-item
+                        a(href="/", target="_blank", rel="")
+                            figure.thumbnails-item-image
+                                .item-image(style="background-image:url(images/test_img.jpg)") 
+                            .thumbnails-item-info 테스트중입니다....테스트중입니다....테스트중입니다....   
+                     
+        
+        
+        include footer.pug
+
+                 
