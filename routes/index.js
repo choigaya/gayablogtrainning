@@ -34,7 +34,7 @@ router.get('/about', (req, res, next) => {
 });
 
 router.get('/page', (req, res, next) => {
-    
+    res.render('page', { title: 'Gaya - page test' });
 });
 
 router.get('*', (req, res, next) => {

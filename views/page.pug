@@ -1,0 +1,26 @@
+extends layout.pug
+
+block content
+    include header.pug
+    include nav.pug
+    .main
+        main(role="main")
+            section.post
+                header.post-header
+                    h1.post-title 테스트 입니다.
+                    .post-date 2020-02-20
+                p.post-content 컨텐츠 가 들어갑니다.테스트 중입니다.컨텐츠 가 들어갑니다.테스트 중입니다.컨텐츠 가 들어갑니다.테스트 중입니다.컨텐츠 가 들어갑니다.테스트 중입니다.컨텐츠 가 들어갑니다.테스트 중입니다.컨텐츠 가 들어갑니다.테스트 중입니다. 
+                
+                .gaya-btn-area
+                    button 좋아요
+                    button 공유하기
+
+                .gaya-form-area  
+                    form(action="#", method="post")
+                        input(type="text" minlength="4" maxlength="12" placeholder="이메일")     
+                        input(type="text" maxlength="16" placeholder="비밀번호(수정 및 삭제 시 사용)") 
+                        <br/>
+                        textarea(placeholder="댓글을 입력해주세요.") 
+                        button 등록
+
+        include footer.pug 
