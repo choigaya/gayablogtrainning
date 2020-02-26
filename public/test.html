@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="css/style.css">
-   <title>GayaGalley: 자신의 그림을 자랑해보세요!</title>
+   <title>Gaya Blog: Test</title>
 </head>
+
 <body>
    <div id="wrap">
       <div class="container">
@@ -34,11 +36,11 @@
                   <div class="child-3" style="font-size: 1em;border: 1px solid deeppink;">
                      child 3
                      <div class="child-4" style="font-size: 1em;border: 1px solid yellow;">
-                        child 4    
+                        child 4
                      </div>
                   </div>
-               </div>  
-            </div>  
+               </div>
+            </div>
          </div>
          <div class="main">
             <div id="tagList">
@@ -48,18 +50,38 @@
                   <a href="/" class="gaya-btn">#️⃣Test3</a>
                   <a href="/" class="gaya-btn">#️⃣Test4</a>
                   <a href="/" class="gaya-btn">#️⃣Test5</a>
-                  <a href="/" class="gaya-btn">#️⃣Test6</a>               
+                  <a href="/" class="gaya-btn">#️⃣Test6</a>
                   <a href="/" class="gaya-btn">#️⃣Test7</a>
                   <a href="/" class="gaya-btn">#️⃣Test8</a>
                   <a href="/" class="gaya-btn">#️⃣Test9</a>
                   <a href="/" class="gaya-btn">#️⃣Test10</a>
-               </div>    
+               </div>
             </div>
             <main>
                <section>
-                   <h3>TEST</h3>
-                   <p>
-                   </p>
+                  <h3>TEST</h3>
+                  <div id="disqus_thread"></div>
+                  <script>
+
+                     /**
+                     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+                     /*
+                     var disqus_config = function () {
+                     this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                     this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                     };
+                     */
+                     (function () { // DON'T EDIT BELOW THIS LINE
+                        var d = document, s = d.createElement('script');
+                        s.src = 'https://http-gayablog-herokuapp-com.disqus.com/embed.js';
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                     })();
+                  </script>
+                  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments
+                        powered by Disqus.</a></noscript>
+
                </section>
             </main>
             <footer>
@@ -73,4 +95,5 @@
       </div>
    </div>
 </body>
+<script id="dsq-count-scr" src="//http-gayablog-herokuapp-com.disqus.com/count.js" async></script>
 </html>
