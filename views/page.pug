@@ -10,10 +10,18 @@ block content
                     h1.post-title 테스트 입니다.
                     .post-date 2020-02-20
                 p.post-content 컨텐츠 가 들어갑니다.테스트 중입니다.컨텐츠 가 들어갑니다.테스트 중입니다.컨텐츠 가 들어갑니다.테스트 중입니다.컨텐츠 가 들어갑니다.테스트 중입니다.컨텐츠 가 들어갑니다.테스트 중입니다.컨텐츠 가 들어갑니다.테스트 중입니다. 
-                
-                .gaya-btn-area
-                    button 좋아요
-                    button 공유하기
+
+                #fb-root
+                script(async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0")
+                .fb-like(
+                    data-href="https://www.facebook.com/pesdernak" 
+                    data-layout="standard" 
+                    data-action="like" 
+                    data-show-faces="true"
+                )
+                //- .gaya-btn-area
+                //-     button 좋아요
+                //-     button 공유하기
 
                 .gaya-form-area  
                     form(action="#", method="post")
@@ -23,4 +31,7 @@ block content
                         textarea(placeholder="댓글을 입력해주세요.") 
                         button 등록
 
+              
+
         include footer.pug 
+include fb.pug
