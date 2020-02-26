@@ -29,7 +29,8 @@ app.use( (err, req, res, next) => {
    res.render('error');
 });
  
-app.listen(7700, () => {
+console.log("실행 포트 번호는 :" + process.env.PORT);
+app.listen(process.env.PORT || 5000, () => {
    console.log("Server success!");
 });
 
