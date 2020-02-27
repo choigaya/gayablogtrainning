@@ -11,13 +11,8 @@ app.set('view engine', 'pug');
 app.use(logger('dev'));
 app.use(express.static(path.join(__dirname, 'public')));
 
-/* TODO: DISQUS test code*/
-app.get('/test', (req, res, next) => {
-   res.sendFile(path.join(__dirname,'public','test.html'));
-});
-
+// home page
 app.use('/', indexRouter);
-
 
 // catch 404 and forward to error handler
 app.use( (req, res, next) => {

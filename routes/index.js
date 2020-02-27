@@ -33,8 +33,8 @@ router.get('/about', (req, res, next) => {
     res.render('about', { title: 'Gaya - About' }); 
 });
 
-router.get('/page', (req, res, next) => {
-    res.render('page', { title: 'Gaya - page test' });
+router.get('/:id/page', (req, res, next) => {
+    res.render('page', { title: 'Gaya - page' });
 });
 
 router.get('*', (req, res, next) => {

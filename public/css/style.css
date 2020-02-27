@@ -190,16 +190,6 @@ a {
   padding: 0 0.2rem;
 }
 
-/* 버튼 */
-.gaya-btn-area {
-  margin-bottom: 2rem;
-}
-
-/* 폼 */
-.gaya-form-area {
-  width: 2.5rem;
-}
-
 div#wrap {
   padding: 0;
   margin: 0;
@@ -245,17 +235,6 @@ div#wrap div.container header.main-header div.logo {
   font-size: 1.8rem;
   line-height: 1.5;
   border-bottom: 2px solid black !important;
-}
-
-div#wrap div.container header.main-header div.login {
-  margin-right: 20px;
-  font-size: .8rem;
-  color: #000000;
-}
-
-div#wrap div.container header.main-header div.login span a:hover {
-  text-decoration: underline;
-  color: rgba(51, 51, 51, 0.7);
 }
 
 div#wrap div.container nav {
@@ -321,7 +300,7 @@ div#wrap div.container div.main main section.post-area-category {
 }
 
 div#wrap div.container div.main main section.post-area-category .post-category-title {
-  padding: 1rem;
+  padding: 0;
   font-size: 1rem;
   font-weight: 600;
   margin-bottom: 1rem;
@@ -360,7 +339,7 @@ div#wrap div.container div.main main section div.post-area.thumbnails-area .thum
   width: 20%;
   -ms-flex-preferred-size: calc(20% - 0.5rem);
       flex-basis: calc(20% - 0.5rem);
-  margin: 0 0.85rem 2rem;
+  margin: 0 0.8rem 2rem;
   /* 이미지가 들어감, figurecation 은 이미지의 설명부분이므로 생략 필요에 따라 사용가능 */
 }
 
