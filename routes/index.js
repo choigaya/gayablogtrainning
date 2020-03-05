@@ -3,14 +3,17 @@ const url = require("url");
 const router = express.Router();
 
 router.get("/", (req, res, next) => {
-  res.render("index", { title: "Gaya Blog" });
+  console.log(req.url);
+  res.render("index", { 
+     title: "Gaya Blog",
+    });
 });
 
 router.get("/portfolio", (req, res, next) => {
   res.render("thumbnails", {
     title: "Gaya - 포트폴리오",
     heading: "포트폴리오",
-    pathname: "portfolio",
+    pathname: "portfolio", 
     number: 0,
     content:
       "테스트중입니다...테스트중입니다....테스트중입니다....테스트중입니다....테스트중입니다....테스트중입니다...."
@@ -21,7 +24,7 @@ router.get("/develop", (req, res, next) => {
   res.render("thumbnails", {
     title: "Gaya - 개발공부",
     heading: "개발공부",
-    pathname: "develop",
+    pathname: "develop", 
     number: 0,
     content:
       "테스트중입니다...테스트중입니다....테스트중입니다....테스트중입니다....테스트중입니다....테스트중입니다...."
@@ -62,16 +65,22 @@ router.get("/language", (req, res, next) => {
 });
 
 router.get("/blog", (req, res, next) => {
-  res.render("blog", { title: "Gaya - 블로그" });
+  res.render("blog", { 
+    title: "Gaya - 블로그", 
+  });
 });
 
 router.get("/about", (req, res, next) => {
-  res.render("about", { title: "Gaya - About" });
+  res.render("about", { 
+    title: "Gaya - About",
+   });
 });
 
 router.get("/:id/page/:id", (req, res, next) => {
   /* console.log(url.parse(req.url).pathname); */
-  res.render("page", { title: "Gaya - page" });
+  res.render("page", {
+     title: "Gaya - page" 
+    });
 });
 
 router.get("*", (req, res, next) => {

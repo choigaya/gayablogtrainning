@@ -1,12 +1,13 @@
-// TODO_BUG: nav 리스트 글자색 바꾸기
-let url = location.pathname,
-    sideBar = document.getElementsByTagName("ul"),
-    list = sideBar[0].childNodes;    
+let ul = document.getElementsByTagName("ul")[0],
+  li = ul.children;
+  url = location.pathname;
 
-list.forEach((elm, index) => {
-  let aList = [];
-      path = elm.childNodes[0].pathname;
-
-  aList.push(path);
-  console.log(aList.indexOf(url));
-});
+for (let index = 0; index < li.length; index++) {
+    if (url.includes(li[index].children[0].pathname)) {
+      if (li[0].children[0].classList.contains("active")) {
+        console.log(index);
+        li[0].children[0].classList.remove("active");     
+      }
+      li[index].children[0].classList.add("active");
+    }    
+}
