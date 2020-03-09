@@ -60,45 +60,40 @@ div#wrap {
   margin: 0;
 
   div.container {
-    position: relative;
+    margin: 0 auto;
+    padding: 1rem 0;
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 17fr minmax(0, 60fr) 17fr;
+    grid-template-rows: 25px 30px auto 50px 20px;
+    max-width: 95%;
+    min-height: 100vh;
 
     header.main-header {
-      position: fixed;
-      top: 0px;
-      left: 0px;
-      right: 0px;
       width: 100%;
-      height: 64px;
-      padding: 10px;
       display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-      background-color: white;
-      box-shadow: lightgrey 1px 1px 3px 1px;
-      z-index: 999;
-
+      flex-direction: row; 
       div.logo {
-        margin: 0 50px;
-        font-size: 1.8rem;
-        line-height: 1.5;
-        border-bottom: 2px solid rgb(0, 0, 0) !important;
+        font-size: 1.5rem;   
+      }
+
+      nav.header-nav {
+        display: flex;
+        flex-direction: row; 
+
+        ul {
+          display: flex; 
+        }
+        h2 {
+          display: none;
+        }
       }
     }
 
-    nav {
-      position: fixed;
-      z-index: 100;
-      left: 10px;
-      right: 0;
+    nav.main-nav {
       padding: 50px;
-      margin-top: 80px;
       line-height: 1.5;
       letter-spacing: -0.05em;
       width: 240px;
-      overflow: hidden;
       font-size: 16px;
       font-weight: 600;
 
@@ -107,7 +102,6 @@ div#wrap {
       }
 
       div.sidebar-list {
-
         li {
           padding: .2em;
           list-style: none;
@@ -115,7 +109,7 @@ div#wrap {
           border-bottom: 2px solid #000000;
 
           a {
-             color: #000000;
+            color: #000000;
 
             &:hover,
             &.active {
@@ -133,139 +127,138 @@ div#wrap {
       display: flex;
       flex-direction: column;
 
-      main {
-        padding: 50px;
-        overflow: auto;
+      section {
+        span {
+          display: none;
+        }
 
-        section {
+        p.article-title {
+          font-size: 2rem;
+        }
 
-          span {
-            display: none;
-          }
 
-          /* section.post-area-category */
-          &.post-area-category {
-            margin-top: 2rem;
+        /* section.post-area-category */
+        &.post-area-category {
+          margin-top: 2rem;
 
-            .post-category-title {
-              padding: 0;
-              font-size: 1rem;
-              font-weight: 600;
-              margin-bottom: 1rem;
+          .post-category-title {
+            padding: 0;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
 
-              a:hover {
-                text-decoration: underline;
-                cursor: cursor;
-              }
+            a:hover {
+              text-decoration: underline;
+              cursor: cursor;
             }
           }
+        }
 
-          /* 1번째 section */
-          div.post-area {
+        /* 1번째 section */
+        div.post-area {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-between;
+
+          /* 2번째 ~ 3번째 section 에 관한 썸네일 리스트 클래스 */
+          &.thumbnails-area {
             display: flex;
-            flex-direction: row;
             flex-wrap: wrap;
-            justify-content: space-between;
 
-            /* 2번째 ~ 3번째 section 에 관한 썸네일 리스트 클래스 */
-            &.thumbnails-area {
-              display: flex;
-              flex-wrap: wrap;
+            .thumbnails-item {
+              width: 20%;
+              flex-basis: calc(20% - 0.5rem);
+              margin: 0 0.8rem 2rem;
 
-              .thumbnails-item {
-                width: 20%;
-                flex-basis: calc(20% - 0.5rem);
-                margin: 0 0.8rem 2rem;
-
-                :hover {
-                  text-decoration: underline;
-                }
-
-                /* 이미지가 들어감, figurecation 은 이미지의 설명부분이므로 생략 필요에 따라 사용가능 */
-                figure.thumbnails-item-image {
-                  margin-bottom: 0.555rem;
-
-                  .item-image {
-                    padding-bottom: 100%;
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    background-size: cover;
-                  }
-                }
-
-                .thumbnails-item-info {
-                  font-size: .85rem;
-                }
+              :hover {
+                text-decoration: underline;
               }
-            }
 
-            div.post-area-item {
-              flex-basis: calc(50% - 1rem);
-              margin: 0 0 1rem;
+              /* 이미지가 들어감, figurecation 은 이미지의 설명부분이므로 생략 필요에 따라 사용가능 */
+              figure.thumbnails-item-image {
+                margin-bottom: 0.555rem;
 
-              div.post-item-title {
-                font-weight: 600;
-                font-size: 1.5rem;
-                letter-spacing: -0.05em;
-                margin-bottom: 0.5rem;
-
-                h2 {
-                  font-weight: 600;
-                  margin-bottom: 0.5rem;
-                }
-
-                p.article-date,
-                p.post-item-category {
-                  display: inline;
-                  font-weight: 400;
-                  font-size: 0.85rem;
-                  text-decoration: none;
-                }
-
-                p.post-item-category::before {
-                  content: '/';
-                }
-
-                :hover {
-                  text-decoration: underline;
+                .item-image {
+                  padding-bottom: 100%;
+                  background-repeat: no-repeat;
+                  background-position: center;
+                  background-size: cover;
                 }
               }
 
-              .post-item-desc {
-                font-size: 1rem;
-                letter-spacing: -0.05em;
-                line-height: 1.5;
-                text-align: justify;
-
-                :hover {
-                  text-decoration: underline;
-                }
+              .thumbnails-item-info {
+                font-size: .85rem;
               }
             }
           }
 
-          /* 각 페이지 포스트 링크 */
-          &.post {
-            line-height: 2;
+          div.post-area-item {
+            flex-basis: calc(50% - 1rem);
+            margin: 0 0 1rem;
 
-            .post-header {
-              margin-bottom: 2rem;
+            div.post-item-title {
+              font-weight: 600;
+              font-size: 1.5rem;
+              letter-spacing: -0.05em;
+              margin-bottom: 0.5rem;
 
-              .post-title {
-                font-size: 2rem;
-                line-height: 1.4;
-                text-align: left;
+              h2 {
+                font-weight: 600;
+                margin-bottom: 0.5rem;
+              }
+
+              p.article-date,
+              p.post-item-category {
+                display: inline;
+                font-weight: 400;
+                font-size: 0.85rem;
+                text-decoration: none;
+              }
+
+              p.post-item-category::before {
+                content: '/';
+              }
+
+              :hover {
+                text-decoration: underline;
               }
             }
 
-            .post-content {
+            .post-item-desc {
               font-size: 1rem;
-              font-weight: normal;
-              text-align: left;
-              line-height: 1;
               letter-spacing: -0.05em;
-              margin-bottom: 2rem;
+              line-height: 1.5;
+              text-align: justify;
+
+              :hover {
+                text-decoration: underline;
+              }
             }
+          }
+        }
+
+        /* 각 페이지 포스트 링크 */
+        &.post {
+          line-height: 2;
+
+          .post-header {
+            margin-bottom: 2rem;
+
+            .post-title {
+              font-size: 2rem;
+              line-height: 1.4;
+              text-align: left;
+            }
+          }
+
+          .post-content {
+            font-size: 1rem;
+            font-weight: normal;
+            text-align: left;
+            line-height: 1;
+            letter-spacing: -0.05em;
+            margin-bottom: 2rem;
           }
         }
       }
