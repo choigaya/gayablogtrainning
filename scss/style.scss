@@ -20,13 +20,22 @@ a {
 }
 
 .link-list {
+  display: flex;
+  flex-direction: row;
+  grid-area: linknav;
   font-weight: 600;
-  margin-top: 50px;
-  line-height: 1.5;
+  line-height: 1;
   letter-spacing: -0.05em;
 
-  a {
-    border-bottom: 2px solid rgb(0, 0, 0);
+  ul {
+    display: flex;
+    flex-direction: row;
+    font-size: 1rem;
+    align-items: center;
+
+    li {
+      padding-left: 10px;
+    }
   }
 
   a:hover {
@@ -61,36 +70,57 @@ div#wrap {
 
   div.container {
     margin: 0 auto;
-    padding: 1rem 0;
+    padding: 2.5rem 0;
     display: grid;
     grid-template-columns: 17fr minmax(0, 60fr) 17fr;
-    grid-template-rows: 25px 30px auto 50px 20px;
+    grid-template-rows: 50px auto 20px;
+   /*  grid-template-areas:
+          'header headernav linknav'
+          'mainnav main'
+          'footer'; */
+
     max-width: 95%;
     min-height: 100vh;
 
     header.main-header {
       width: 100%;
       display: flex;
-      flex-direction: row; 
+      flex-direction: row;
+      grid-area: header;
+
       div.logo {
-        font-size: 1.5rem;   
+        display: flex;
+        flex-direction: row;
+        font-size: 1.5rem;
+        align-items: center;
+        border-bottom: 2.5px solid #000000;
+      }
+    }
+
+    nav.header-nav {
+      display: flex;
+      flex-direction: row;
+      font-size: 1rem;
+      margin: 0 30px;
+      grid-area: headernav;
+
+      ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        li {
+          padding-left: 10px;
+        }
       }
 
-      nav.header-nav {
-        display: flex;
-        flex-direction: row; 
-
-        ul {
-          display: flex; 
-        }
-        h2 {
-          display: none;
-        }
+      h2 {
+        display: none;
       }
     }
 
     nav.main-nav {
-      padding: 50px;
+      padding: 2rem 0;
       line-height: 1.5;
       letter-spacing: -0.05em;
       width: 240px;
@@ -101,7 +131,7 @@ div#wrap {
         display: none;
       }
 
-      div.sidebar-list {
+      .sidebar-list {
         li {
           padding: .2em;
           list-style: none;
@@ -121,11 +151,12 @@ div#wrap {
     }
 
     div.main {
-      padding: 0 25px;
-      margin-top: 80px;
-      margin-left: 300px;
+      padding: 2rem 0;
+      margin: 0 40px;
       display: flex;
       flex-direction: column;
+      align-items: start;
+      grid-area: main;
 
       section {
         span {
@@ -266,6 +297,7 @@ div#wrap {
       footer {
         padding: 0 25px;
         margin-top: 200px;
+        grid-area: footer;
 
         div.copyright {
           line-height: 1.5;
