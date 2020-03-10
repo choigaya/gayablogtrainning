@@ -162,7 +162,6 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  grid-area: linknav;
   font-weight: 600;
   line-height: 1;
   letter-spacing: -0.05em;
@@ -223,8 +222,8 @@ div#wrap div.container {
   display: grid;
   -ms-grid-columns: 17fr minmax(0, 60fr) 17fr;
       grid-template-columns: 17fr minmax(0, 60fr) 17fr;
-  -ms-grid-rows: 50px auto 20px;
-      grid-template-rows: 50px auto 20px;
+  -ms-grid-rows: 50px 25px auto 20px;
+      grid-template-rows: 50px 25px auto 20px;
   /*  grid-template-areas:
           'header headernav linknav'
           'mainnav main'
@@ -242,7 +241,6 @@ div#wrap div.container header.main-header {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  grid-area: header;
 }
 
 div#wrap div.container header.main-header div.logo {
@@ -270,7 +268,6 @@ div#wrap div.container nav.header-nav {
           flex-direction: row;
   font-size: 1rem;
   margin: 0 30px;
-  grid-area: headernav;
 }
 
 div#wrap div.container nav.header-nav ul {
@@ -335,7 +332,6 @@ div#wrap div.container div.main {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
-  grid-area: main;
 }
 
 div#wrap div.container div.main section {
@@ -490,7 +486,6 @@ div#wrap div.container div.main section.post .post-content {
 div#wrap div.container div.main footer {
   padding: 0 25px;
   margin-top: 200px;
-  grid-area: footer;
 }
 
 div#wrap div.container div.main footer div.copyright {
