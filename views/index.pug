@@ -1,10 +1,12 @@
 extends layout.pug
 
 block content
-    include header.pug
-    include mainNav.pug 
-    .main
-        section
-          p.article-title FRESH POST     
-
+  include header.pug 
+  include headerNav.pug
+  include linkNav.pug
+  include mainNav.pug
+  .main
+    section
+      p.article-title FRESH POST    
+  include sidebar.pug
 

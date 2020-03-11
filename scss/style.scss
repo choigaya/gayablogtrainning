@@ -72,8 +72,8 @@ div#wrap {
     padding: 2.5rem 0;
     display: grid;
     grid-template-columns: 17fr minmax(0, 60fr) 17fr;
-    grid-template-rows: 50px 25px auto 20px;
-   /*  grid-template-areas:
+    grid-template-rows: 50px auto 20px;
+    /* grid-template-areas:
           'header headernav linknav'
           'mainnav main'
           'footer'; */
@@ -82,16 +82,15 @@ div#wrap {
     min-height: 100vh;
 
     header.main-header {
-      width: 100%;
       display: flex;
       flex-direction: row;
+      justify-content: space-between;
 
       div.logo {
-        display: flex;
-        flex-direction: row;
-        font-size: 1.5rem;
         align-items: center;
-        border-bottom: 2.5px solid #000000;
+        font-size: 2rem;
+        line-height: 1;
+        letter-spacing: 0.2em;
       }
     }
 
@@ -99,8 +98,6 @@ div#wrap {
       display: flex;
       flex-direction: row;
       font-size: 1rem;
-      margin: 0 30px;
-     
 
       ul {
         display: flex;
@@ -154,7 +151,7 @@ div#wrap {
       display: flex;
       flex-direction: column;
       align-items: start;
-      
+
 
       section {
         span {
@@ -295,7 +292,7 @@ div#wrap {
       footer {
         padding: 0 25px;
         margin-top: 200px;
-        
+
 
         div.copyright {
           line-height: 1.5;
