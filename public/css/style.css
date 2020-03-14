@@ -154,41 +154,6 @@ a {
   text-decoration: none;
 }
 
-.link-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  font-weight: 600;
-  line-height: 1;
-  letter-spacing: -0.05em;
-}
-
-.link-list ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  font-size: 1rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.link-list ul li {
-  padding-left: 10px;
-}
-
-.link-list a:hover {
-  color: rgba(51, 51, 51, 0.7);
-}
-
 /* 재활용이 가능 한 클래스 리스트 들 */
 .download {
   font-size: 1rem;
@@ -203,13 +168,6 @@ a {
   margin-bottom: 1rem;
 }
 
-.page-title {
-  font-size: 1rem;
-  font-weight: normal;
-  margin-bottom: 1rem;
-  padding: 0 0.2rem;
-}
-
 div#wrap {
   padding: 0;
   margin: 0;
@@ -222,17 +180,18 @@ div#wrap div.container {
   display: grid;
   -ms-grid-columns: 17fr minmax(0, 60fr) 17fr;
       grid-template-columns: 17fr minmax(0, 60fr) 17fr;
-  -ms-grid-rows: 50px auto 20px;
-      grid-template-rows: 50px auto 20px;
-  /* grid-template-areas:
-          'header headernav linknav'
-          'mainnav main'
-          'footer'; */
+  -ms-grid-rows: 50px auto 50px;
+      grid-template-rows: 50px auto 50px;
+      grid-template-areas: 'header header header' 'mainnav main sidebar' 'footer footer footer';
   max-width: 95%;
   min-height: 100vh;
 }
 
 div#wrap div.container header.main-header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: header;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -246,15 +205,65 @@ div#wrap div.container header.main-header {
 }
 
 div#wrap div.container header.main-header div.logo {
+  padding: .35rem 1rem;
+  margin: 0 1rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   font-size: 2rem;
   line-height: 1;
   letter-spacing: 0.2em;
+  border: 2px solid #000000;
 }
 
-div#wrap div.container nav.header-nav {
+div#wrap div.container header.main-header nav.header-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 0 60px;
+  font-size: 1rem;
+}
+
+div#wrap div.container header.main-header nav.header-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+}
+
+div#wrap div.container header.main-header nav.header-nav ul li {
+  padding-left: 10px;
+}
+
+div#wrap div.container header.main-header nav.header-nav h2 {
+  display: none;
+}
+
+div#wrap div.container header.main-header .link-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+div#wrap div.container header.main-header .link-list ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -263,31 +272,24 @@ div#wrap div.container nav.header-nav {
       -ms-flex-direction: row;
           flex-direction: row;
   font-size: 1rem;
-}
-
-div#wrap div.container nav.header-nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-div#wrap div.container nav.header-nav ul li {
+div#wrap div.container header.main-header .link-list ul li {
   padding-left: 10px;
 }
 
-div#wrap div.container nav.header-nav h2 {
-  display: none;
+div#wrap div.container header.main-header .link-list a:hover {
+  color: rgba(51, 51, 51, 0.7);
 }
 
 div#wrap div.container nav.main-nav {
-  padding: 2rem 0;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: mainnav;
+  padding: 2rem 1rem;
   line-height: 1.5;
   letter-spacing: -0.05em;
   width: 240px;
@@ -299,24 +301,27 @@ div#wrap div.container nav.main-nav h2 {
   display: none;
 }
 
-div#wrap div.container nav.main-nav .sidebar-list li {
+div#wrap div.container nav.main-nav .category li {
   padding: .2em;
   list-style: none;
   margin-bottom: .8em;
   border-bottom: 2px solid #000000;
 }
 
-div#wrap div.container nav.main-nav .sidebar-list li a {
+div#wrap div.container nav.main-nav .category li a {
   color: #000000;
 }
 
-div#wrap div.container nav.main-nav .sidebar-list li a:hover, div#wrap div.container nav.main-nav .sidebar-list li a.active {
+div#wrap div.container nav.main-nav .category li a:hover, div#wrap div.container nav.main-nav .category li a.active {
   color: rgba(51, 51, 51, 0.7);
 }
 
 div#wrap div.container div.main {
-  padding: 2rem 0;
-  margin: 0 40px;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: main;
+  padding: 0 2rem;
+  margin: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -327,6 +332,13 @@ div#wrap div.container div.main {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
+}
+
+div#wrap div.container div.main h1.page-title {
+  font-size: 1rem;
+  font-weight: normal;
+  margin-bottom: 1rem;
+  padding: 0 0.2rem;
 }
 
 div#wrap div.container div.main section {
@@ -340,7 +352,9 @@ div#wrap div.container div.main section span {
 }
 
 div#wrap div.container div.main section p.article-title {
-  font-size: 2rem;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  line-height: 1;
 }
 
 div#wrap div.container div.main section.post-area-category {
@@ -387,7 +401,6 @@ div#wrap div.container div.main section div.post-area.thumbnails-area .thumbnail
   width: 20%;
   -ms-flex-preferred-size: calc(20% - 0.5rem);
       flex-basis: calc(20% - 0.5rem);
-  margin: 0 0.8rem 2rem;
   /* 이미지가 들어감, figurecation 은 이미지의 설명부분이므로 생략 필요에 따라 사용가능 */
 }
 
@@ -478,13 +491,33 @@ div#wrap div.container div.main section.post .post-content {
   margin-bottom: 2rem;
 }
 
-div#wrap div.container div.main footer {
-  padding: 0 25px;
-  margin-top: 200px;
+div#wrap div.container div.sidebar {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: sidebar;
 }
 
-div#wrap div.container div.main footer div.copyright {
+div#wrap div.container footer {
+  -ms-flex-item-align: center;
+      align-self: center;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: footer;
+  padding: 0 25px;
+  margin-top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+div#wrap div.container footer div.copyright {
   line-height: 1.5;
-  font-size: 1rem;
+  font-size: 0.85rem;
 }
 /*# sourceMappingURL=style.css.map */
