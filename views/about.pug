@@ -1,10 +1,9 @@
 extends layout.pug
 
 block content
-    include header.pug
-    include nav.pug
+    include header.pug 
+    include mainNav.pug
     .main
-        main(role="main")
-            h1.page-title About
-            
-        include footer.pug 
+        h1.page-title About
+    include sidebar.pug
+

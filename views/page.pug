@@ -1,29 +1,26 @@
 extends layout.pug
 
 block content
-    include header.pug
-    include nav.pug
+    include header.pug 
+    include mainNav.pug
     .main
-        main(role="main")
-            section.post
-                header.post-header
-                    h1.post-title 테스트 입니다.
-                    .post-date 2020-02-20
-                p.post-content 컨텐츠 가 들어갑니다.테스트 중입니다.컨텐츠 가 들어갑니다.테스트 중입니다.컨텐츠 가 들어갑니다.테스트 중입니다.컨텐츠 가 들어갑니다.테스트 중입니다.컨텐츠 가 들어갑니다.테스트 중입니다.컨텐츠 가 들어갑니다.테스트 중입니다. 
-                
-                //- disqus area
-                #disqus_thread
-                    script.
-                        (function () { // DON'T EDIT BELOW THIS LINE
-                            var d = document, s = d.createElement('script');
-                            s.src = 'https://http-gayablog-herokuapp-com.disqus.com/embed.js';
-                            s.setAttribute('data-timestamp', + new Date());
-                            (d.head || d.body).appendChild(s);
-                        })();
+        section.post
+            header.post-header
+                h1.post-title 테스트 입니다.
+                .post-date 2020-02-20
+            p.post-content 컨텐츠 가 들어갑니다.테스트 중입니다.컨텐츠 가 들어갑니다.테스트 중입니다.컨텐츠 가 들어갑니다.테스트 중입니다.컨텐츠 가 들어갑니다.테스트 중입니다.컨텐츠 가 들어갑니다.테스트 중입니다.컨텐츠 가 들어갑니다.테스트 중입니다. 
 
-                    noscript Please enable JavaScript to view the 
-                        a(href="https://disqus.com/?ref_noscript") comments powered by Disqus
+            //- disqus area
+            #disqus_thread
+                script.
+                    (function () { // DON'T EDIT BELOW THIS LINE
+                        var d = document, s = d.createElement('script');
+                        s.src = 'https://http-gayablog-herokuapp-com.disqus.com/embed.js';
+                        s.setAttribute('data-timestamp', + new Date());
+                        (d.head || d.body).appendChild(s);
+                    })();
 
+                noscript Please enable JavaScript to view the 
+                    a(href="https://disqus.com/?ref_noscript") comments powered by Disqus
 
-
-        include footer.pug 
+    include sidebar.pug

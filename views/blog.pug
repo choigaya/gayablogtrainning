@@ -1,15 +1,14 @@
-extends layout.pug  
+extends layout.pug
 
 block content
-    include header.pug
-    include nav.pug
+    include header.pug 
+    include mainNav.pug
     .main
-        main(role="main")
-            h1.page-title 블로그
-            section
-                //- 리더기
-                span 컨텐츠 별 메인페이지  
-                //- 컨텐츠 내용
-                include post.pug
-            
-        include footer.pug 
+        h1.page-title 블로그
+        section
+            //- 리더기
+            span 컨텐츠 별 메인페이지  
+            //- 컨텐츠 내용
+            include post.pug
+
+    include sidebar.pug

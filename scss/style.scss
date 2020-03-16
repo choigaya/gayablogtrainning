@@ -70,17 +70,28 @@ div#wrap {
       nav.header-nav {
         display: flex;
         flex-direction: row;
-        margin: 0 60px;
         font-size: 1rem;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
 
         ul {
           display: flex;
           flex-direction: row;
           align-items: center;
-          justify-items: center;
+          justify-content: center;
 
           li {
             padding-left: 10px;
+
+            a {
+              color: #000000;
+
+              &:hover,
+              &.active {
+                color: rgba(51, 51, 51, .7);
+              }
+            }
           }
         }
 
@@ -95,6 +106,7 @@ div#wrap {
         font-weight: 600;
         line-height: 1;
         letter-spacing: -0.05em;
+        margin: 0 10px;
 
         ul {
           display: flex;
@@ -199,10 +211,13 @@ div#wrap {
           &.thumbnails-area {
             display: flex;
             flex-wrap: wrap;
+            margin: 0 -1rem;
 
             .thumbnails-item {
-              width: 20%;
-              flex-basis: calc(20% - 0.5rem);
+              width: 25%;
+              flex-basis: calc(25% - .2rem);
+              margin-bottom: 1rem;
+              padding: 0 1rem;
 
               :hover {
                 text-decoration: underline;
@@ -298,7 +313,94 @@ div#wrap {
     }
 
     div.sidebar {
+      display: flex;
+      flex-basis: auto;
       grid-area: sidebar;
+      transition: opacity 0.3s ease-out 0s, transform 0.3s ease-out 0s;
+      opacity: 1;
+
+      .card-content {
+        background-color: transparent;
+        padding: 1.5rem;
+
+        .card-title {
+          margin-bottom: 1rem;
+          color: #000000;
+          font-size: .75rem;
+          letter-spacing: .1em;
+        }
+
+        article.media {
+          display: flex;
+          align-items: flex-start;
+          text-align: left;
+          color: #7a7a7a;
+
+          .media-left {
+            margin-right: 1rem;
+            flex-basis: auto;
+            flex-grow: 0;
+            flex-shrink: 0;
+            text-align: left;
+
+            p.image {
+              position: relative;
+
+              &.is-64 {
+                width: 64px;
+                height: 64px;
+
+                .thumbnail {
+                  width: 100% !important;
+                  height: 100% !important;
+                }
+              }
+            }
+          }
+
+          .media-content {
+            color: #7a7a7a;
+            flex-basis: auto;
+            flex-grow: 1;
+            flex-shrink: 1;
+            text-align: left;
+          }
+
+          .is-size-small {
+            font-size: 0.75rem !important;
+          }
+
+          .title.is-6 {
+            margin: 0;
+            line-height: 1;
+            font-size: .85rem;
+            font-weight: 400;
+            color: #363636;
+          }
+
+          .link-content {
+            color: #000000;
+            cursor: pointer;
+
+            &:hover {
+              color: #7a7a7a;
+            }
+          }
+
+          .link {
+            color: #000000;
+            text-decoration: none;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+
+          .is-uppercase {
+            text-transform: uppercase !important;
+          }
+        }
+      }
     }
 
     footer {
